@@ -35,7 +35,7 @@ def get_sample_fps(
     if plate is not None:
         filtered_df = filtered_df[filtered_df["plate"] == int(plate)]
     if well is not None:
-        filtered_df = filtered_df[filtered_df["well"] == well]
+        filtered_df = filtered_df[filtered_df["well"] == int(well)]
     if tile is not None:
         filtered_df = filtered_df[filtered_df["tile"] == int(tile)]
     if cycle is not None:
@@ -56,7 +56,7 @@ def get_sample_fps(
             if plate is not None:
                 filtered_df = filtered_df[filtered_df["plate"] == int(plate)]
             if well is not None:
-                filtered_df = filtered_df[filtered_df["well"] == well]
+                filtered_df = filtered_df[filtered_df["well"] == int(well)]
             if tile is not None:
                 filtered_df = filtered_df[filtered_df["tile"] == int(tile)]
             if cycle is not None:
@@ -114,6 +114,8 @@ def get_sample_fps(
             for channel in channel_order
             if channel in channel_to_file
         ]
+    
+
 
     # Otherwise return single file path
     return filtered_df["sample_fp"].iloc[0]

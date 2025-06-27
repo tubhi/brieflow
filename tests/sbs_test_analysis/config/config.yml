@@ -1,0 +1,20 @@
+
+# ~BrieFlow analysis configuration file~
+
+# All paths are resolved relative to the directory the workflow is run from.
+
+# Parameters:
+all:
+  root_fp: /Volumes/SecondaryOPS_TU/brieflow_test_output
+preprocess:
+  sbs_samples_fp: /Users/tubhi/Desktop/Postdoc work/Secondary OPS/Analysis/Genotyping
+    analysis/Brieflow/Pre-process/sbs_samples.tsv
+  sbs_combo_fp: config/sbs_combo.tsv
+  phenotype_samples_fp: config/phenotype_samples.tsv
+  phenotype_combo_fp: config/phenotype_combo.tsv
+  sbs_channel_order: null
+  phenotype_channel_order: null
+  phenotype_round_order: null
+  sbs_channel_order_flip: null
+  phenotype_channel_order_flip: null
+  sample_fraction: 1.0
